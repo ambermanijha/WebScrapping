@@ -7,6 +7,6 @@ def FetchAndSaveToFile(url,path):
         f.write(r.text)
 
 
-url= "https://www.abcconsultants.in/"
+url= "https://www.sample_company.in/"
 
-FetchAndSaveToFile(url, "ABC.html")
+FetchAndSaveToFile(url, "sample_company.html")

@@ -21,4 +21,30 @@ s=soup.find(id="link3")
 #print(soup.select("span#italic"))
 #print(soup.span.get("class"))
 
-print(soup.find(class_="italic"))
+#print(soup.find(class_="italic"))
+#for child in soup.find(class_="container").children:
+#    print(child)
+
+#for parent in soup.find(class_="box").parents:
+#    print(parent)
+
+"""ulTag=soup.new_tag("ul")
+LiTag=soup.new_string("li")
+ulTag.append(LiTag)
+
+LiTag=soup.new_tag("li")
+LiTag.string="About"
+ulTag.append(LiTag)
+
+soup.html.body.insert(0,ulTag)
+with open("modified.html","w") as f:
+    f.write(str(soup))"""
+
+#cont=soup.find(class_="container")
+#print(cont.has_attr("class"))
+
+def has_class_but_not_id(tag):
+    return tag.has_attr("class") and tag.has_attr("id")
+
+results=soup.find_all(has_class_but_not_id)
+print(results)
